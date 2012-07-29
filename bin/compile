@@ -38,7 +38,7 @@ PHP_URL="https://s3.amazonaws.com/php-lp/php-$PHP_VERSION.tar.gz"
 echo "-----> Bundling PHP version $PHP_VERSION"
 curl --silent --max-time 60 --location "$PHP_URL" | tar xz
 
-/app/php/bin/pecl install magick
+pecl install magick
 
 # update config files
 cp $LP_DIR/conf/httpd.conf $APACHE_PATH/conf
